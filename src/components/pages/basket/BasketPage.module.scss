@@ -1,0 +1,89 @@
+.BasketPage {
+  padding: 20px;
+  margin: 0 89px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    img {
+      width: 50px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    select {
+      padding: 5px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .button {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .coupon {
+    display: flex;
+    gap: 10px;
+
+    input {
+      padding: 10px;
+      flex: 1;
+    }
+
+    .applyCoupon {
+      padding: 10px 20px;
+      background: #e63946;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .cartTotal {
+    border: 1px solid #333;
+    padding: 20px;
+    max-width: 300px;
+    margin-left: auto;
+
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+
+    .checkoutButton {
+      width: 100%;
+      padding: 10px 20px;
+      background: #e63946;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

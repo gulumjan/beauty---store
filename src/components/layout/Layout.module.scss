@@ -1,0 +1,20 @@
+.LayoutSite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  main {
+    margin: 0 80px;
+  }
+  footer {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .LayoutSite {
+    main {
+      margin: 0;
+    }
+  }
+}

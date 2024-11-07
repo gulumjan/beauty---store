@@ -1,0 +1,46 @@
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f5f8;
+}
+
+.loaderRing {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid#B22222;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaderCircle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #f7f5f8;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loadingText {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  color: #c07a7a;
+  position: absolute;
+  top: 110%;
+  text-align: center;
+}

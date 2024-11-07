@@ -1,0 +1,128 @@
+.Footer {
+  background-color: #f3d6e4;
+  color: #9a5e7a;
+  padding: 40px;
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .exclusive,
+    .Support,
+    .Account,
+    .Quick,
+    .Download {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h4 {
+        font-weight: 100;
+      }
+
+      .ico {
+        display: flex;
+        gap: 20px;
+
+        span {
+          font-size: 35px;
+        }
+      }
+
+      input {
+        width: 260px;
+        height: 50px;
+        padding: 0 10px;
+        background: transparent;
+        border: 2px solid white;
+      }
+
+      span {
+        position: absolute;
+        right: 8px;
+        bottom: 70px;
+        color: white;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Footer {
+    padding: 20px;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .exclusive input {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Footer {
+    padding: 15px;
+    background-color: #f3d6e4;
+
+    color: #9a5e7a;
+
+    .content {
+      gap: 15px;
+
+      .exclusive {
+        input {
+          width: 100%;
+          height: 45px;
+        }
+      }
+
+      .ico span {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .Footer {
+    padding: 10px;
+
+    .content {
+      .exclusive input {
+        width: 100%;
+        height: 40px;
+      }
+
+      .ico span {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 268px) {
+  .Footer {
+    padding: 8px;
+
+    .content {
+      align-items: center;
+      text-align: center;
+
+      .exclusive input {
+        width: 100%;
+        height: 35px;
+      }
+
+      .ico span {
+        font-size: 26px;
+      }
+    }
+  }
+}

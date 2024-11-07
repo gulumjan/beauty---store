@@ -1,0 +1,27 @@
+.container {
+  .content_wrapper {
+    margin-bottom: 6rem;
+    color: black;
+    position: relative;
+    height: 17rem;
+    width: 13rem;
+  }
+
+  .inner_box {
+    border-right: 1px solid#cfcccc;
+
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    width: 13rem;
+    padding-right: 16rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

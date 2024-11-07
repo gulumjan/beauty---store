@@ -1,0 +1,10 @@
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+
+  svg {
+    width: 1.5rem;
+    color: #fbbf24;
+    fill: currentColor;
+  }
+}

@@ -1,0 +1,10 @@
+.CategoryPage {
+  margin-top: 20px;
+  .categories {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid#cfcccc;
+    padding: 25px 0;
+    padding-bottom: 45px;
+  }
+}

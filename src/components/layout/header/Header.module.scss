@@ -1,0 +1,254 @@
+.Header {
+  .content {
+    .blackHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #000;
+      flex-direction: column;
+
+      p {
+        color: #fff;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      select {
+        background: none;
+        color: #fff;
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+    }
+
+    .mainHeader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      text-align: center;
+
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        a {
+          color: #000;
+        }
+
+        display: none;
+      }
+
+      .logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+
+        .iconContainer {
+          position: relative;
+        }
+
+        .badge {
+          position: absolute;
+          top: -6px;
+          right: -6px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          padding: 2px 4px;
+          font-size: 10px;
+          font-weight: bold;
+        }
+
+        .searchContainer {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 80%;
+
+          input {
+            width: 100%;
+            padding: 8px 36px 8px 12px;
+            border: none;
+            border-radius: 4px;
+            background: rgb(243, 241, 241);
+            font-size: 14px;
+
+            &:focus {
+              background: white;
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+              outline: none;
+            }
+          }
+
+          .searchIcon {
+            position: absolute;
+            right: 10px;
+            color: gray;
+            pointer-events: none;
+          }
+        }
+
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          p {
+            font-size: 12px;
+            color: #000;
+          }
+
+          .profileImage {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          color: #333;
+          cursor: pointer;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #000;
+          }
+        }
+
+        .moreIcon {
+          display: none;
+          cursor: pointer;
+          font-size: 24px;
+        }
+
+        .modal {
+          display: none;
+          position: absolute;
+          top: 60px;
+          right: 10px;
+          background: white;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      .blackHeader {
+        flex-direction: row;
+        justify-content: space-between;
+        p {
+          font-size: 10px;
+        }
+      }
+
+      .mainHeader {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 40px;
+
+        nav {
+          display: flex;
+          gap: 20px;
+          color: #000;
+        }
+
+        h2 {
+          display: flex;
+          align-items: center;
+        }
+
+        .logos {
+          gap: 17px;
+
+          .iconContainer .badge {
+            font-size: 12px;
+            padding: 3px 6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      .blackHeader {
+        flex-direction: row;
+        justify-content: space-between;
+        p {
+          font-size: 8px;
+        }
+      }
+      .mainHeader {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        nav,
+        .searchContainer,
+        .iconContainer {
+          display: none;
+        }
+
+        .logos {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+
+          .moreIcon {
+            display: block;
+          }
+
+          img,
+          .moreIcon,
+          .burgerButton {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+
+      .modal {
+        display: flex;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content {
+      .mainHeader {
+        margin: 0 89px;
+
+        .logos {
+          gap: 40px;
+        }
+      }
+    }
+  }
+}

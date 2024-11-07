@@ -1,0 +1,80 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model User {
+  id         Int         @id @default(autoincrement())
+  firstName  String
+  lastName   String      @default("")
+  email      String      @unique
+  password   String
+  photo      String
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  favourites Favourite[] 
+  basker Basket[]
+}
+
+model Favourite {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      Int
+  productId   Int   
+  category    String
+  title       String 
+  image       String 
+  createdAt   DateTime @default(now())
+
+  @@unique([userId, productId]) 
+}
+
+
+model Basket {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      Int
+  productId   Int
+  category    String
+  title       String
+  image       String
+  price       Int?     
+  quantity    Int      @default(1) 
+  createdAt   DateTime @default(now())
+
+  @@unique([userId, productId])
+}
+
+
+
+model Product {
+  id                  Int      @id @default(autoincrement())
+  title               String
+  description         String
+  category            String
+  price               Float
+  discountPercentage  Float
+  rating              Float
+  stock               Int
+  tags                String[] 
+  brand               String
+  sku                 String
+  weight              Float
+  dimensions          Json 
+  warrantyInformation String
+  shippingInformation String
+  availabilityStatus  String
+  reviews             Json 
+  returnPolicy        String
+  minimumOrderQuantity Int
+  meta                Json
+  thumbnail           String
+  images              String[] 
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}

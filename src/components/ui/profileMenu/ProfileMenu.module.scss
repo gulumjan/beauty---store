@@ -1,0 +1,63 @@
+.ProfileMenu {
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 999;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: flex-start;
+    background-color: #f3d6e4;
+
+    border-radius: 5px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      padding: 11px 15px;
+      width: 200px;
+      a {
+        text-decoration: none;
+        color: #9a5e7a;
+      }
+
+      &:hover {
+        background: #af7f95;
+        color: #fff;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-left: 20px;
+        color: #9a5e7a;
+      }
+    }
+
+    hr {
+      width: 200px;
+    }
+    .logout {
+      width: 200px;
+      padding: 15px;
+      &:hover {
+        background-color: #f3d6e4;
+        color: #fff;
+      }
+
+      button {
+        font-size: 14px;
+        border: none;
+        background: none;
+        color: #9a5e7a;
+      }
+    }
+  }
+}
