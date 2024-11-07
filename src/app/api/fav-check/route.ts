@@ -22,10 +22,10 @@ export const POST = async (request: Request) => {
     });
 
     return NextResponse.json({ exists: Boolean(favourite) }, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error checking favourites:", error);
     return NextResponse.json(
-      { message: `Error checking favourites: ${error.message}` },
+      { message: `Error checking favourites: ${error}` },
       { status: 500 }
     );
   }

@@ -1,12 +1,11 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { PrismaClient } from "@prisma/client";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"; // Import authOptions
 
 const prisma = new PrismaClient();
 
-export const GET = async (request: Request) => {
-  const session = await getServerSession(authOptions);
+export const GET = async () => {
+  const session = await getServerSession();
   console.log("🚀 ~ GET ~ session:", session);
 
   if (!session || !session.user || !session.user.email) {
@@ -28,10 +27,10 @@ export const GET = async (request: Request) => {
     }
 
     return NextResponse.json(user, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error fetching user:", error);
     return NextResponse.json(
-      { message: `Error fetching user: ${error.message}` },
+      { message: `Error fetching user: ${error}` },
       { status: 500 }
     );
   }

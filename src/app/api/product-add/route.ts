@@ -41,10 +41,10 @@ export const POST = async (request: Request) => {
     });
 
     return NextResponse.json(newProduct, { status: 201 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error during product creation:", error);
     return NextResponse.json(
-      { message: `Error during product creation: ${error.message}` },
+      { message: `Error during product creation: ${error}` },
       { status: 500 }
     );
   }

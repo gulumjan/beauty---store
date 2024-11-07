@@ -27,10 +27,10 @@ export const POST = async (request: Request) => {
     });
 
     return NextResponse.json(favourite, { status: 201 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error adding to favourites:", error);
     return NextResponse.json(
-      { message: `Error adding to favourites: ${error.message}` },
+      { message: `Error adding to favourites: ${error}` },
       { status: 500 }
     );
   }

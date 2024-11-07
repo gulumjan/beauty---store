@@ -12,10 +12,10 @@ export const GET = async () => {
     });
 
     return NextResponse.json(products, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error fetching beauty products:", error);
     return NextResponse.json(
-      { message: `Error fetching beauty products: ${error.message}` },
+      { message: `Error fetching beauty products: ${error}` },
       { status: 500 }
     );
   }

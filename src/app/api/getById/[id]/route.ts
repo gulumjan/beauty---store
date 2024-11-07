@@ -31,10 +31,10 @@ export const GET = async (
     }
 
     return NextResponse.json(product, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error fetching product by ID:", error);
     return NextResponse.json(
-      { message: `Error fetching product by ID: ${error.message}` },
+      { message: `Error fetching product by ID: ${error}` },
       { status: 500 }
     );
   }

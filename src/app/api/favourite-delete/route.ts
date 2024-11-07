@@ -28,10 +28,10 @@ export const DELETE = async (request: Request) => {
       { message: "Item successfully deleted." },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error deleting from favourites:", error);
 
-    if (error.code === "P2025") {
+    if (error === "P2025") {
       return NextResponse.json(
         { message: "No matching item found to delete." },
         { status: 404 }
@@ -39,7 +39,7 @@ export const DELETE = async (request: Request) => {
     }
 
     return NextResponse.json(
-      { message: `Error deleting from favourites: ${error.message}` },
+      { message: `Error deleting from favourites: ${error}` },
       { status: 500 }
     );
   }

@@ -13,9 +13,7 @@ const authOptions = {
       clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     }),
   ],
-  secret: process.env.JWT_SECRET,
 };
-
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST, authOptions }; 
+export { handler as GET, handler as POST };
