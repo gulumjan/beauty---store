@@ -65,14 +65,20 @@
 
 @media (max-width: 768px) {
   .BrowseBy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .title {
       font-size: 15px;
     }
     .categories {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
       .categoryCard {
-        width: 12rem;
+        width: 10rem;
       }
     }
   }
@@ -87,7 +93,7 @@
       display: flex;
       flex-wrap: wrap;
       .categoryCard {
-        width: 12rem;
+        width: 10rem;
       }
     }
   }

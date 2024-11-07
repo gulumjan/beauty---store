@@ -13,7 +13,7 @@ $transition: 0.3s ease;
   position: absolute;
   top: 105px;
 
-  z-index: 1;
+  z-index: 999;
   right: 0px;
   opacity: 0;
   visibility: hidden;
@@ -54,6 +54,12 @@ $transition: 0.3s ease;
     }
 
     .auth_login_buttons {
+      display: flex;
+      flex-direction: column;
+      button {
+        background: none;
+        border: none;
+      }
       .sign_in_button {
         padding: 7px 14px;
         display: block;

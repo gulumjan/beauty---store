@@ -87,3 +87,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .Jewelery {
+    .content {
+      ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

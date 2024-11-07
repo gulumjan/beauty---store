@@ -2,7 +2,6 @@ import { BaseQueryFn, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { createApi } from "@reduxjs/toolkit/query/react";
 
 const baseQueryMyApi = fetchBaseQuery({
-  // baseUrl: `${process.env.NEXT_PUBLIC_MY_API_URL}`,
   baseUrl: "https://face-store-three.vercel.app/",
 });
 

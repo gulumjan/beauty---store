@@ -2,7 +2,7 @@ import React from "react";
 import scss from "./BurgerMenu.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useGetUserQuery } from "@/redux/api/my-api";
 import { useHeaderStore } from "@/stores/useHeaderStore";
 import { signIn, signOut } from "next-auth/react";
@@ -11,6 +11,7 @@ const BurgerMenu = () => {
   const pathname = usePathname();
   const { data: session } = useGetUserQuery();
   const { isOpenBurgerMenu, setIsOpenBurgerMenu, links } = useHeaderStore();
+  const router = useRouter();
 
   return (
     <>
@@ -45,6 +46,8 @@ const BurgerMenu = () => {
                 >
                   Login
                 </button>
+                <button onClick={() => router.push("/")}>Home </button>
+                <button onClick={() => router.push("/about")}>About </button>
               </div>
             </>
           )}
