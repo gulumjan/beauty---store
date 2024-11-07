@@ -90,7 +90,7 @@ const Header: FC = () => {
               <a href="/">Home</a>
               <a href="/contact">Contact</a>
               <a href="/about">About</a>
-              <a href="#collection">Collection</a>
+              <a href="#collection">Collection </a>
             </nav>
             <div className={scss.logos}>
               <div className={scss.searchContainer}>
